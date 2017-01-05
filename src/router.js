@@ -7,11 +7,11 @@ import {
   browserHistory,
 } from 'react-router'
 
-import App from '../App'
-import Home from '../Home'
-import Presentation from '../Presentation'
-import Info from '../Info'
-import Photos from '../Photos'
+import App from './components/App'
+import Home from './components/Home'
+import Presentation from './components/Presentation'
+import Info from './components/Info'
+import Photos from './components/Photos'
 
 export default (
   <Router history={browserHistory}>
