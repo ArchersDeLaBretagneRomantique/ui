@@ -7,7 +7,7 @@ const App = ({ location: { pathname }, children }) => {
   return (
     <div className="container">
       <NavBar pathname={pathname} />
-      {children}
+        {children}
       <Footer />
     </div>
   )

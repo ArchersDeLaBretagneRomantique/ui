@@ -1,18 +1,22 @@
 import React from 'react'
 import { Link } from 'react-router'
 
+import { getI18nLabels } from '../../services/I18nService'
+
+const labels = getI18nLabels({
+  title: 'TITLE',
+  intro: 'HOME.INTRO',
+  joinUs: 'HOME.JOIN_US',
+})
+
 const Home = () => {
   return (
     <div>
       <div className="jumbotron">
-        <h1>
-          Les Archers de la Bretagne Romantique
-        </h1>
-        <p>
-          Club de tir à l&#39;arc basé à Tinténiac, Bretagne.
-        </p>
+        <h1>{labels.title}</h1>
+        <p>{labels.intro}</p>
         <Link to="/info" className="btn btn-primary">
-          Nous rejoindre
+          {labels.joinUs}
         </Link>
       </div>
       <div className="row marketing">

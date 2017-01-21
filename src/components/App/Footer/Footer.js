@@ -1,11 +1,15 @@
 import React from 'react'
 
+import { getI18nLabels } from '../../../services/I18nService'
+
+const labels = getI18nLabels({
+  footer: 'FOOTER',
+})
+
 const Footer = () => {
   return (
     <footer className="footer">
-        <p>
-          &copy; Les Archers de la Bretagne Romantique 2016
-        </p>
+        <p>{labels.footer}</p>
     </footer>
   )
 }

@@ -2,37 +2,48 @@ import React, { PropTypes } from 'react'
 import { Link, IndexLink } from 'react-router'
 import classnames from 'classnames'
 
+import { getI18nLabels } from '../../../services/I18nService'
+
+const labels = getI18nLabels({
+  home: 'HOME.TiTLE',
+  presentation: 'PRESENTATION.TITLE',
+  info: 'INFO.TITLE',
+  photo: 'PHOTO.TITLE',
+  title: 'TITLE',
+})
+
+const getClassName = (path, pathname) => classnames({ active: pathname === path })
+
 const NavBar = ({ pathname }) => {
-  const getClassName = path => classnames({ active: pathname === path })
   return (
     <header className="header">
         <nav>
             <ul className="nav nav-pills pull-right">
-                <li className={getClassName('/')}>
+                <li className={getClassName('/', pathname)}>
                   <IndexLink to="/">
-                    Accueil
+                    {labels.home}
                   </IndexLink>
                 </li>
-                <li className={getClassName('/presentation')}>
+                <li className={getClassName('/presentation', pathname)}>
                   <Link to="/presentation">
-                    Présentation
+                    {labels.presentation}
                   </Link>
                 </li>
-                <li className={getClassName('/info')}>
+                <li className={getClassName('/info', pathname)}>
                   <Link to="/info">
-                    Informations
+                    {labels.info}
                   </Link>
                 </li>
-                <li className={getClassName('/photos')}>
+                <li className={getClassName('/photos', pathname)}>
                   <Link to="/photos">
-                    Galerie photos
+                    {labels.photo}
                   </Link>
                 </li>
             </ul>
         </nav>
         <h3>
           <IndexLink className="text-muted" to="/">
-            Les Archers de la Bretagne Romantique
+            {labels.title}
           </IndexLink>
         </h3>
     </header>
