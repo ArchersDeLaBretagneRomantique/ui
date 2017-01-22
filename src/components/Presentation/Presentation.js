@@ -5,13 +5,13 @@ import { getI18nLabels } from '../../services/I18nService'
 
 const labels = getI18nLabels({
   title: 'PRESENTATION.TITLE',
-  beginningTitle: 'BEGINNING.TITLE',
-  beginningSpeach: 'BEGINNING.SPEACH',
-  beginningEnum: 'BEGINNING.ENUM',
-  evolutionTitle: 'EVOLUTION.TITLE',
-  evolutionSpeach1: 'EVOLUTION.SPEACH_1',
-  evolutionSpeach2: 'EVOLUTION.SPEACH_2',
-  evolutionEnum: 'EVOLUTION.ENUM',
+  beginningTitle: 'PRESENTATION.BEGINNING.TITLE',
+  beginningSpeach: 'PRESENTATION.BEGINNING.SPEACH',
+  beginningEnum: 'PRESENTATION.BEGINNING.ENUM',
+  evolutionTitle: 'PRESENTATION.EVOLUTION.TITLE',
+  evolutionSpeach1: 'PRESENTATION.EVOLUTION.SPEACH_1',
+  evolutionSpeach2: 'PRESENTATION.EVOLUTION.SPEACH_2',
+  evolutionEnum: 'PRESENTATION.EVOLUTION.ENUM',
 })
 
 const Presentation = () => {
@@ -23,7 +23,7 @@ const Presentation = () => {
         <p>{labels.beginningSpeach}</p>
         <ul>
           {
-            labels.beginningEnum.forEach(item => <li>{item}</li>)
+            labels.beginningEnum.map(item => <li>{item}</li>)
           }
         </ul>
 
@@ -32,7 +32,7 @@ const Presentation = () => {
         <p>{labels.evolutionSpeach2}</p>
         <ul>
           {
-            labels.evolutionEnum.forEach(item => <li>{item}</li>)
+            labels.evolutionEnum.map(item => <li>{item}</li>)
           }
         </ul>
       </div>

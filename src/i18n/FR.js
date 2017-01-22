@@ -1,6 +1,6 @@
 export default {
   TITLE: 'Les Archers de la Bretagne Romantique',
-  FOOTER: '&copy; Les Archers de la Bretagne Romantique 2016',
+  FOOTER: '© Les Archers de la Bretagne Romantique 2016',
   HOME: {
     TITLE: 'Accueil',
     INTRO: 'Club de tir à l\'arc basé à Tinténiac, Bretagne.',

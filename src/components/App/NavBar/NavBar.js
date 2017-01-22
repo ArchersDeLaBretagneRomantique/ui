@@ -5,7 +5,7 @@ import classnames from 'classnames'
 import { getI18nLabels } from '../../../services/I18nService'
 
 const labels = getI18nLabels({
-  home: 'HOME.TiTLE',
+  home: 'HOME.TITLE',
   presentation: 'PRESENTATION.TITLE',
   info: 'INFO.TITLE',
   photo: 'PHOTO.TITLE',
